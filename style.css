@@ -1,0 +1,156 @@
+:root {
+    --tab_selected_color: rgb(32, 32, 32);
+    --tab_color: rgb(20, 20, 20);
+    --background: rgb(40, 40, 40);  
+}
+
+html {
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";;
+    margin: 0px; 
+    background-color: var(--background);
+    height: 100%;
+    color: white;
+    overflow-x: hidden;
+}
+
+.ShortIntro {
+    position: relative;
+    left: 5%;
+    width: 35%;
+    text-align: center;
+    font-size: 1.2em;
+    animation-name: StartLeft;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;
+}
+
+.Name {
+    text-align: center;
+    position: relative;
+    width: 34.3%;
+    top: 30px;
+    left: 5%;
+    font-size: 3.5em;
+    font-weight: normal;
+    animation-name: StartLeft;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;
+}
+
+.Profile { 
+    position: relative;
+    left: 7.5%;
+    width: 30%;
+    top: 40px;
+    animation-name: StartLeft;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;
+}
+
+.text {
+    background-color: var(--tab_selected_color);
+    order: 1;
+    display: none;
+    position: absolute;
+    top: 50px;
+    height: 80%;
+    width: 90%;
+    padding-left: 30px;
+    padding-right: 30px;
+    overflow-y: scroll;
+}
+
+.TextEditor input[type="radio"] {
+    display: none;
+}
+
+#hr {
+    position: relative;
+    bottom: 34px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    display: none;
+}
+
+.TextEditor {
+    position: absolute;
+    height: 92%;
+    width: 55%;
+    left: 43%;
+    top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    animation-name: StartRight;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;
+}
+ 
+.TextEditor input[type="radio"]:checked + label + .text {
+    display: block;
+} 
+
+
+.TextEditor input[type="radio"]:checked + label {
+    background-color: var(--tab_selected_color);
+}
+
+
+.TextEditor input[type="radio"]:checked + label #hr {
+    display: block;
+}
+
+.TextEditor label {
+    position: relative;
+    background-color: var(--tab_color); 
+    width: 15%;
+    font-size: 1.2vw;
+    text-align: center;
+    height: 50px;
+    margin-right: 20px;
+    line-height: 17px;
+}
+
+@keyframes StartLeft {
+    from {  
+        opacity: 0;
+        left: -20em;
+    }
+    50% {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes StartRight {
+    from {  
+        opacity: 0;
+        left: 115%;
+    }
+    50% {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #4a4a4a;
+    background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #6e6e6e;
+  }
+
+
