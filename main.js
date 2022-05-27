@@ -1,6 +1,5 @@
 globalIndex = 0
 
-
 window.onresize =  function() {
     let firstTabWidth = document.getElementsByClassName("label")[0].offsetWidth;
     let secondTabWidth = document.getElementsByClassName("label")[1].offsetWidth;
